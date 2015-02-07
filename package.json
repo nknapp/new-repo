@@ -1,0 +1,27 @@
+{
+  "name": "new-repo",
+  "version": "0.0.1",
+  "description": "CLI tool to create a new node module including github repo",
+  "bin": {
+    "new-repo": "new-gh-repo"
+  },
+  "dependencies": {
+    "tooljs-github": "^0.0.1"
+  },
+  "private": "yes",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nils Knappmeier",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nknapp/new-repo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nknapp/new-repo/issues"
+  },
+  "homepage": "https://github.com/nknapp/new-repo",
+  "main": "index.js"
+}
