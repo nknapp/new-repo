@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "CLI tool to create a new node module including github repo",
   "bin": {
-    "new-repo": "new-gh-repo"
+    "new-repo": "new-gh-repo",
+    "needs-release": "needs-release.js"
   },
   "dependencies": {
     "tooljs-github": "^0.0.1"
