@@ -4,9 +4,14 @@
   "description": "CLI tool to create a new node module including github repo",
   "bin": {
     "new-repo": "new-gh-repo",
-    "needs-release": "needs-release.js"
+    "needs-release": "needs-release.js",
+    "push-to-github": "push-to-github.js",
+    "node-harmony": "node-harmony.sh"
   },
   "dependencies": {
+    "commander": "^2.9.0",
+    "khaos": "^0.9.3",
+    "request": "^2.69.0",
     "tooljs-github": "^0.0.1"
   },
   "private": "yes",
@@ -22,6 +27,9 @@
   },
   "bugs": {
     "url": "https://github.com/nknapp/new-repo/issues"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "homepage": "https://github.com/nknapp/new-repo",
   "main": "index.js"

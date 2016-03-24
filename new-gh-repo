@@ -1,13 +1,13 @@
 #!/bin/bash
 
 . ~/.gh-token
+export GH_TOKEN
 
-NAME="$1"
-ORG="nknapp"
-unset DISPLAY
+USER="nknapp"
 
 if [ -z "${NAME}" ] ; then
     echo Usage "$0" repo-name
+    echo
     exit 1
 fi
 
@@ -17,13 +17,4 @@ khaos create nils "$NAME"
 
 cd "$1" || exit 1
 
-cat package.json | jq "{ name: .name, description: .description} " \
- | curl -XPOST -d@- -H "Authorization: token ${GH_TOKEN}" "https://api.github.com/user/repos"
-
-# Initialize git
-git init || exit 1
-git remote add origin git@github.com:"$ORG"/"$NAME".git || exit 1
-# Add all files to the repository
-git add . || exit 1
-git commit -m "Initial check-in"
-git push -u origin master
+push-to-github
