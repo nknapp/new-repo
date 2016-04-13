@@ -4,6 +4,7 @@
 export GH_TOKEN
 
 USER="nknapp"
+NAME=$1
 
 if [ -z "${NAME}" ] ; then
     echo Usage "$0" repo-name
