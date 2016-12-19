@@ -14,7 +14,7 @@ fi
 
 
 # Create from template
-khaos create nils "$NAME"
+khaos create nknapp/khaos-template "$NAME"
 
 cd "$1" || exit 1
 
